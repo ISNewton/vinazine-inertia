@@ -27,7 +27,7 @@ class Comments extends Component
     }
 
     public function deleteComment(Comment $comment) {
-        if ($comment->user_id === auth()->id()) {
+        if ($comment->user_id == auth()->id()) {
             $comment->delete();
             if ($comment->parent_id) {
                 $this->comments = $this->comments->fresh('replies');
