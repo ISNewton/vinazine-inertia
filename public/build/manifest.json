@@ -1,6 +1,6 @@
 {
   "resources/scripts/main.ts": {
-    "file": "assets/main.2df52062.js",
+    "file": "assets/main.4a6f243a.js",
     "src": "resources/scripts/main.ts",
     "isEntry": true,
     "dynamicImports": [
@@ -35,7 +35,7 @@
     ]
   },
   "resources/views/dashboard/Charts/BarChart.vue": {
-    "file": "assets/BarChart.20f50f8c.js",
+    "file": "assets/BarChart.c422e29a.js",
     "src": "resources/views/dashboard/Charts/BarChart.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -47,7 +47,7 @@
     "file": "assets/_plugin-vue_export-helper.cdc0426e.js"
   },
   "resources/views/dashboard/Pages/Categories/Create.vue": {
-    "file": "assets/Create.82462394.js",
+    "file": "assets/Create.a3b25ba5.js",
     "src": "resources/views/dashboard/Pages/Categories/Create.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -55,7 +55,7 @@
       "resources/views/dashboard/Shared/Layout.vue",
       "resources/views/dashboard/Shared/TextInput.vue",
       "resources/views/dashboard/Shared/LoadingButton.vue",
-      "_index.03b199cd.js",
+      "_index.c6dcdc71.js",
       "__plugin-vue_export-helper.cdc0426e.js",
       "resources/views/dashboard/Shared/Logo.vue",
       "resources/views/dashboard/Shared/Icon.vue",
@@ -65,7 +65,7 @@
     ]
   },
   "resources/views/dashboard/Shared/Layout.vue": {
-    "file": "assets/Layout.9742cb54.js",
+    "file": "assets/Layout.1e9b2d92.js",
     "src": "resources/views/dashboard/Shared/Layout.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -79,7 +79,7 @@
     ]
   },
   "resources/views/dashboard/Shared/TextInput.vue": {
-    "file": "assets/TextInput.bb592f9b.js",
+    "file": "assets/TextInput.cb7c748c.js",
     "src": "resources/views/dashboard/Shared/TextInput.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -88,7 +88,7 @@
     ]
   },
   "resources/views/dashboard/Shared/LoadingButton.vue": {
-    "file": "assets/LoadingButton.1999a4e8.js",
+    "file": "assets/LoadingButton.b34bd7dc.js",
     "src": "resources/views/dashboard/Shared/LoadingButton.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -96,14 +96,14 @@
       "resources/scripts/main.ts"
     ]
   },
-  "_index.03b199cd.js": {
-    "file": "assets/index.03b199cd.js",
+  "_index.c6dcdc71.js": {
+    "file": "assets/index.c6dcdc71.js",
     "imports": [
       "resources/scripts/main.ts"
     ]
   },
   "resources/views/dashboard/Shared/Logo.vue": {
-    "file": "assets/Logo.f8b465e3.js",
+    "file": "assets/Logo.5cc1eb61.js",
     "src": "resources/views/dashboard/Shared/Logo.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -112,7 +112,7 @@
     ]
   },
   "resources/views/dashboard/Shared/Icon.vue": {
-    "file": "assets/Icon.c9aa07d7.js",
+    "file": "assets/Icon.d1bc1079.js",
     "src": "resources/views/dashboard/Shared/Icon.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -121,7 +121,7 @@
     ]
   },
   "resources/views/dashboard/Shared/Dropdown.vue": {
-    "file": "assets/Dropdown.7682805b.js",
+    "file": "assets/Dropdown.5c540676.js",
     "src": "resources/views/dashboard/Shared/Dropdown.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -130,7 +130,7 @@
     ]
   },
   "resources/views/dashboard/Shared/MainMenu.vue": {
-    "file": "assets/MainMenu.24b786c3.js",
+    "file": "assets/MainMenu.622d5cb0.js",
     "src": "resources/views/dashboard/Shared/MainMenu.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -140,7 +140,7 @@
     ]
   },
   "resources/views/dashboard/Shared/FlashMessages.vue": {
-    "file": "assets/FlashMessages.5dd45041.js",
+    "file": "assets/FlashMessages.e98316ad.js",
     "src": "resources/views/dashboard/Shared/FlashMessages.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -149,7 +149,7 @@
     ]
   },
   "resources/views/dashboard/Pages/Categories/Edit.vue": {
-    "file": "assets/Edit.200e1b7b.js",
+    "file": "assets/Edit.f7dbacb7.js",
     "src": "resources/views/dashboard/Pages/Categories/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -168,7 +168,7 @@
     ]
   },
   "resources/views/dashboard/Shared/FileInput.vue": {
-    "file": "assets/FileInput.f2c369aa.js",
+    "file": "assets/FileInput.838c6058.js",
     "src": "resources/views/dashboard/Shared/FileInput.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -177,7 +177,7 @@
     ]
   },
   "resources/views/dashboard/Shared/SelectInput.vue": {
-    "file": "assets/SelectInput.8e3ac20d.js",
+    "file": "assets/SelectInput.a92a919a.js",
     "src": "resources/views/dashboard/Shared/SelectInput.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -186,13 +186,13 @@
     ]
   },
   "resources/views/dashboard/Pages/Categories/Index.vue": {
-    "file": "assets/Index.8fcbb016.js",
+    "file": "assets/Index.b74c3e83.js",
     "src": "resources/views/dashboard/Pages/Categories/Index.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/scripts/main.ts",
       "resources/views/dashboard/Shared/Icon.vue",
-      "_index.03b199cd.js",
+      "_index.c6dcdc71.js",
       "resources/views/dashboard/Shared/Layout.vue",
       "resources/views/dashboard/Shared/SearchFilter.vue",
       "resources/views/dashboard/Shared/Pagination.vue",
@@ -204,7 +204,7 @@
     ]
   },
   "resources/views/dashboard/Shared/SearchFilter.vue": {
-    "file": "assets/SearchFilter.9ca779cb.js",
+    "file": "assets/SearchFilter.ae301c69.js",
     "src": "resources/views/dashboard/Shared/SearchFilter.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -214,7 +214,7 @@
     ]
   },
   "resources/views/dashboard/Shared/Pagination.vue": {
-    "file": "assets/Pagination.96b3c391.js",
+    "file": "assets/Pagination.d8daf7e0.js",
     "src": "resources/views/dashboard/Shared/Pagination.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -223,7 +223,7 @@
     ]
   },
   "resources/views/dashboard/Pages/Index.vue": {
-    "file": "assets/Index.d69ec7aa.js",
+    "file": "assets/Index.a35c83fc.js",
     "src": "resources/views/dashboard/Pages/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -240,7 +240,7 @@
     ]
   },
   "resources/views/dashboard/Shared/Stats.vue": {
-    "file": "assets/Stats.ce6cb3d4.js",
+    "file": "assets/Stats.491f671a.js",
     "src": "resources/views/dashboard/Shared/Stats.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -250,7 +250,7 @@
     ]
   },
   "resources/views/dashboard/Pages/Posts/Create.vue": {
-    "file": "assets/Create.fe16e4fd.js",
+    "file": "assets/Create.ada5d6f4.js",
     "src": "resources/views/dashboard/Pages/Posts/Create.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -260,7 +260,7 @@
       "resources/views/dashboard/Shared/TextInput.vue",
       "resources/views/dashboard/Shared/SelectInput.vue",
       "resources/views/dashboard/Shared/LoadingButton.vue",
-      "_index.03b199cd.js",
+      "_index.c6dcdc71.js",
       "resources/views/dashboard/Shared/TipTap.vue",
       "__plugin-vue_export-helper.cdc0426e.js",
       "resources/views/dashboard/Shared/Logo.vue",
@@ -271,7 +271,7 @@
     ]
   },
   "resources/views/dashboard/Shared/TipTap.vue": {
-    "file": "assets/TipTap.c82db295.js",
+    "file": "assets/TipTap.b61d0146.js",
     "src": "resources/views/dashboard/Shared/TipTap.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -280,7 +280,7 @@
     ]
   },
   "resources/views/dashboard/Pages/Posts/Edit.vue": {
-    "file": "assets/Edit.d3a7967c.js",
+    "file": "assets/Edit.2ff6d502.js",
     "src": "resources/views/dashboard/Pages/Posts/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -300,13 +300,13 @@
     ]
   },
   "resources/views/dashboard/Pages/Posts/Index.vue": {
-    "file": "assets/Index.b5c3659e.js",
+    "file": "assets/Index.f5f3de80.js",
     "src": "resources/views/dashboard/Pages/Posts/Index.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/scripts/main.ts",
       "resources/views/dashboard/Shared/Icon.vue",
-      "_index.03b199cd.js",
+      "_index.c6dcdc71.js",
       "resources/views/dashboard/Shared/Layout.vue",
       "resources/views/dashboard/Shared/SearchFilter.vue",
       "resources/views/dashboard/Shared/Pagination.vue",
@@ -318,7 +318,7 @@
     ]
   },
   "resources/views/dashboard/Pages/Test.vue": {
-    "file": "assets/Test.e6f99e34.js",
+    "file": "assets/Test.6a971d1c.js",
     "src": "resources/views/dashboard/Pages/Test.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -327,7 +327,7 @@
     ]
   },
   "resources/views/dashboard/Pages/Users/Create.vue": {
-    "file": "assets/Create.54cc3769.js",
+    "file": "assets/Create.5bc80ee9.js",
     "src": "resources/views/dashboard/Pages/Users/Create.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -337,7 +337,7 @@
       "resources/views/dashboard/Shared/TextInput.vue",
       "resources/views/dashboard/Shared/SelectInput.vue",
       "resources/views/dashboard/Shared/LoadingButton.vue",
-      "_index.03b199cd.js",
+      "_index.c6dcdc71.js",
       "__plugin-vue_export-helper.cdc0426e.js",
       "resources/views/dashboard/Shared/Logo.vue",
       "resources/views/dashboard/Shared/Icon.vue",
@@ -347,7 +347,7 @@
     ]
   },
   "resources/views/dashboard/Pages/Users/Edit.vue": {
-    "file": "assets/Edit.a2296873.js",
+    "file": "assets/Edit.23659b1a.js",
     "src": "resources/views/dashboard/Pages/Users/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -366,13 +366,13 @@
     ]
   },
   "resources/views/dashboard/Pages/Users/Index.vue": {
-    "file": "assets/Index.277f702d.js",
+    "file": "assets/Index.80989897.js",
     "src": "resources/views/dashboard/Pages/Users/Index.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/scripts/main.ts",
       "resources/views/dashboard/Shared/Icon.vue",
-      "_index.03b199cd.js",
+      "_index.c6dcdc71.js",
       "resources/views/dashboard/Shared/Layout.vue",
       "resources/views/dashboard/Shared/SearchFilter.vue",
       "resources/views/dashboard/Shared/Pagination.vue",
@@ -384,7 +384,7 @@
     ]
   },
   "resources/views/dashboard/Shared/TextareaInput.vue": {
-    "file": "assets/TextareaInput.389048b7.js",
+    "file": "assets/TextareaInput.7ce8205e.js",
     "src": "resources/views/dashboard/Shared/TextareaInput.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -393,7 +393,7 @@
     ]
   },
   "resources/views/dashboard/Shared/TrashedMessage.vue": {
-    "file": "assets/TrashedMessage.c15bf687.js",
+    "file": "assets/TrashedMessage.0148791e.js",
     "src": "resources/views/dashboard/Shared/TrashedMessage.vue",
     "isDynamicEntry": true,
     "imports": [
