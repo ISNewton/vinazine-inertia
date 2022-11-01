@@ -18,7 +18,7 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        abort_if(Auth::user()->user_type !== User::ROLE_ADMIN, 404);
+        abort_if(Auth::user()->user_type != User::ROLE_ADMIN, 404);
 
         return $next($request);
     }

@@ -32,15 +32,20 @@ Route::group(['middleware' => 'auth'], function () {
     |--------------------------------------------------------------------------
     */
 
-    Route::group([ 'middleware' => 'author','prefix' => 'panel'], function () {
-
-        Route::get('/', [DashboardController::class,'index'])->name('dashboard')->middleware('admin');
+    Route::group(['middleware' => 'author', 'prefix' => 'panel'], function () {
 
         Route::resource('posts', PostController::class);
 
-        Route::resource('categories', CategoryController::class)->middleware('admin');
+        Route::group(['middleware' => 'admin'], function () {
 
-        Route::resource('users', UserController::class)->middleware('admin');
+            Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+            Route::resource('categories', CategoryController::class);
+
+            Route::resource('users', UserController::class);
+
+        });
+
     });
 
     /*
@@ -80,35 +85,35 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('/redirect', [FrontendAuthController::class, 'googleRedirect'])->name('googleRedirect');
     Route::get('/callback', [FrontendAuthController::class, 'googleCallback']);
 
-    Route::get('/forgot-password', [PasswordResetController::class,'requestView'])->name('password.request');
+    Route::get('/forgot-password', [PasswordResetController::class, 'requestView'])->name('password.request');
 
-    Route::post('/forgot-password', [PasswordResetController::class,'handlePasswordRequest'])->name('password.email');
+    Route::post('/forgot-password', [PasswordResetController::class, 'handlePasswordRequest'])->name('password.email');
 
-    Route::get('/reset-password/{token}', [PasswordResetController::class,'resetView'])->name('password.reset');
+    Route::get('/reset-password/{token}', [PasswordResetController::class, 'resetView'])->name('password.reset');
 
-    Route::post('/reset-password', [PasswordResetController::class,'handlePasswordReset'])->name('password.update');
+    Route::post('/reset-password', [PasswordResetController::class, 'handlePasswordReset'])->name('password.update');
 });
 
-    /*
+/*
     |--------------------------------------------------------------------------
     |   Email verification
     |--------------------------------------------------------------------------
     */
-    Route::get('email/verify', [FrontendAuthController::class, 'verify'])->name('verification.notice');
-    Route::get('/email/verify/{id}/{hash}', [FrontendAuthController::class, 'handleVerificationEmailUrl'])->middleware(['auth', 'signed'])->name('verification.verify');
+Route::get('email/verify', [FrontendAuthController::class, 'verify'])->name('verification.notice');
+Route::get('/email/verify/{id}/{hash}', [FrontendAuthController::class, 'handleVerificationEmailUrl'])->middleware(['auth', 'signed'])->name('verification.verify');
 
-    Route::post('/email/verification-notification', [FrontendAuthController::class, 'resendEmailVerificationUrl'])->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+Route::post('/email/verification-notification', [FrontendAuthController::class, 'resendEmailVerificationUrl'])->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 
 
-    /*
+/*
     |--------------------------------------------------------------------------
     |   Frontend
     |--------------------------------------------------------------------------
     */
-    Route::get('/', [FrontendController::class, 'index'])->name('home');
-    Route::post('search', [FrontendController::class, 'search'])->name('search');
-    Route::get('author/{user:username}', [FrontendController::class, 'author'])->name('author');
-    Route::get('category/{category}', [FrontendController::class, 'category'])->name('category');
+Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::post('search', [FrontendController::class, 'search'])->name('search');
+Route::get('author/{user:username}', [FrontendController::class, 'author'])->name('author');
+Route::get('category/{category}', [FrontendController::class, 'category'])->name('category');
 
-    Route::get('{category:name}/{post}', [FrontendController::class, 'post'])->name('post');
+Route::get('{category:name}/{post}', [FrontendController::class, 'post'])->name('post');
