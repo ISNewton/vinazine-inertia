@@ -32,7 +32,7 @@ Route::group(['middleware' => 'auth'], function () {
     |--------------------------------------------------------------------------
     */
 
-    Route::group([ 'middleware' => 'author','domain' => 'panel.vinazine.spatiulab.com'], function () {
+    Route::group([ 'middleware' => 'author','prefix' => 'panel'], function () {
 
         Route::get('/', [DashboardController::class,'index'])->name('dashboard')->middleware('admin');
 
