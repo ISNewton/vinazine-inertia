@@ -10,6 +10,7 @@ use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Frontend\PasswordResetController;
 use App\Http\Controllers\Frontend\AuthController as FrontendAuthController;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\Frontend\AuthController as FrontendAuthController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+
 */
 
 Route::group(['middleware' => 'auth'], function () {
@@ -30,9 +32,9 @@ Route::group(['middleware' => 'auth'], function () {
     |--------------------------------------------------------------------------
     */
 
-    Route::group(['prefix' => 'panel', 'middleware' => 'author'], function () {
+    Route::group([ 'middleware' => 'author','domain' => 'panel.vinazine.spatiulab.com'], function () {
 
-        Route::get('/', [DashboardController::class,'index'])->name('dashboard');
+        Route::get('/', [DashboardController::class,'index'])->name('dashboard')->middleware('admin');
 
         Route::resource('posts', PostController::class);
 
@@ -110,4 +112,3 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('category/{category}', [FrontendController::class, 'category'])->name('category');
 
     Route::get('{category:name}/{post}', [FrontendController::class, 'post'])->name('post');
-

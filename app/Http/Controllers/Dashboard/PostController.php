@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use App\Http\Resources\PostResource;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Inertia\Inertia;
 
 class PostController extends Controller
 {
@@ -23,18 +26,23 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::filter()
+        ->when(auth()->user()->user_type !== User::ROLE_ADMIN, fn ($query) => $query->where('user_id', auth()->id()))
             ->with('user:id,name')
             ->withoutGlobalScopes()
             ->search(request()->q)
             ->latest()
-            ->when(auth()->user()->user_type !== User::ROLE_ADMIN, fn ($query) => $query->where('user_id', auth()->id()))
             ->paginate(20);
 
         $categories = Category::pluck('name', 'id');
 
         $status = Post::STATUS;
 
-        return view('dashboard.posts.index', compact('posts', 'categories', 'status'));
+        return Inertia::render('Posts/Index',[
+            'posts' => PostResource::collection($posts),
+            'categories' => $categories,
+            'status' => $status,
+        ]);
+
     }
 
     /**
@@ -46,7 +54,12 @@ class PostController extends Controller
     {
         $categories = Category::pluck('name', 'id');
 
-        return view('dashboard.posts.create', compact('categories'));
+        $status = Post::STATUS;
+
+        return Inertia::render('Posts/Create',[
+            'categories' => $categories,
+            'status' => $status,
+        ]);
     }
 
     /**
@@ -57,36 +70,19 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
+        // dd($request->validated());
         $data = $request->validated();
 
         $data['user_id'] = Auth::id();
-        $data['is_active']  = $request->is_active == 'on';
 
         if($request->hasFile('thumbnail')) {
-            $data['thumbnail'] = Storage::disk('custome')->put('images/thumbnail',$request->thumbnail);
+            $data['thumbnail'] = Storage::disk('custome')->put('images/thumbnails',$request->thumbnail);
         }
 
         Post::create($data);
 
         return redirect(route('posts.index'))
             ->with('message', config('app.alert_messages.success'));
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($slug)
-    {
-        $post = Post::where('slug', $slug)->withoutGlobalScopes()->firstOrFail();
-
-        $this->authorize($post, 'view');
-
-        $post->load('category', 'user:id,name');
-
-        return view('dashboard.posts.show', compact('post'));
     }
 
     /**
@@ -103,7 +99,13 @@ class PostController extends Controller
 
         $categories = Category::pluck('name', 'id');
 
-        return view('dashboard.posts.edit', compact('post', 'categories'));
+        $status = Post::STATUS;
+
+        return Inertia::render('Posts/Edit',[
+            'post' => PostResource::make($post),
+            'categories' => $categories,
+            'status' => $status,
+        ]);
     }
 
     /**
@@ -122,11 +124,11 @@ class PostController extends Controller
         $data = $request->validated();
 
         if($request->hasFile('thumbnail')) {
-            $data['thumbnail'] = Storage::disk('custome')->put('images/thumbnail',$request->thumbnail);
+            $data['thumbnail'] = Storage::disk('custome')->put('images/thumbnails',$request->thumbnail);
+        } else {
+            unset($data['thumbnail']);
         }
-
-        $data['is_active'] = $request->is_active == 'on';
-
+        
         $post->update($data);
 
         return redirect(route('posts.index'))
@@ -144,6 +146,8 @@ class PostController extends Controller
         $post = Post::where('slug', $slug)->withoutGlobalScopes()->first();
 
         $this->authorize('delete', $post);
+
+        Storage::disk('custome')->delete($post->thumbnail);
 
         $post->delete();
 

@@ -1,0 +1,8 @@
+@import 'buttons.css';
+@import 'form.css';
+@import 'reset.css';
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  background-color: 'red' !important;
+  background-image: none;
+}

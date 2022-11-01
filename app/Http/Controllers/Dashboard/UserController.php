@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Inertia\Inertia;
 
 class UserController extends Controller
 {
@@ -19,14 +21,15 @@ class UserController extends Controller
     public function index()
     {
         $users = User::filter()
-            ->withCount('posts')
             ->search(request()->q)
             ->latest()
-            ->paginate(20);
+            ->paginate(10);
 
-        $status = User::STATUS;
-
-        return view('dashboard.users.index', compact('users', 'status'));
+        return Inertia::render('Users/Index',[
+            'users' => UserResource::collection($users),
+            'status' => User::STATUS,
+            'roles' => User::ROLES,
+        ]);
     }
 
     /**
@@ -37,7 +40,9 @@ class UserController extends Controller
     public function create()
     {
         $roles = User::ROLES;
-        return view('dashboard.users.create',compact('roles'));
+        return Inertia::render('Users/Create',[
+            'roles' => $roles,
+        ]);
     }
 
     /**
@@ -48,22 +53,16 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        User::create($request->validated());
+        $data = $request->validated();
+
+        if($request->hasFile('avatar')) {
+            $data['avatar'] = Storage::disk('custome')->put('images/avatars',$request->file('avatar'));
+        }
+
+        User::create($data);
 
         return redirect(route('users.index'))
             ->with('message', config('app.alert_messages.success'));
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $user)
-    {
-        $user->load('posts:id,user_id,title');
-        return view('dashboard.users.show', compact('user'));
     }
 
     /**
@@ -74,8 +73,14 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
+        $user->load(['posts' => fn($q) => $q->latest()->take(10)]);
+
         $roles = User::ROLES;
-        return view('dashboard.users.edit', compact('user','roles'));
+
+        return Inertia::render('Users/Edit',[
+            'user' => UserResource::make($user),
+            'roles' => $roles
+        ]);
     }
 
     /**
@@ -96,7 +101,7 @@ class UserController extends Controller
         $data['is_blocked']  = $request->is_blocked == 'on';
 
         if($request->hasFile('avatar')) {
-            $data['avatar'] = Storage::disk('custome')->put('images/avatar',$request->file('avatar'));
+            $data['avatar'] = Storage::disk('custome')->put('images/avatars',$request->file('avatar'));
         }
 
         $user->update($data);

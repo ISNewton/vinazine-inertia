@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,13 +20,14 @@ class PostFactory extends Factory
      */
     public function definition()
     {
-        $title = $this->faker->words(6,true);
+        $title = $this->faker->sentence(6);
+        $thumbnails = Storage::disk('custome')->allFiles('frontend/images/news/tech');
         return [
             'user_id' => User::inRandomOrder()->first()->id,
             'category_id' => Category::inRandomOrder()->first()->id,
             'title' => $title,
             'content' => $this->faker->paragraph(40),
-            'thumbnail' => config('app.default_thumbnail'),
+            'thumbnail' => $thumbnails[array_rand($thumbnails)],
             'slug' => Str::slug($title),
         ];
     }

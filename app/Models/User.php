@@ -126,4 +126,8 @@ class User extends Authenticatable implements MustVerifyEmail , CanResetPassword
 
         return 'One post';
     }
+
+    public function getRoleAttribute() {
+       return array_keys(self::ROLES,$this->user_type)[0] ?? null;
+    }
 }

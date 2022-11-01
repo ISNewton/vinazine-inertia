@@ -23,9 +23,12 @@ class Post extends Model implements Viewable
         static::addGlobalScope(new ActivePostScope());
     }
 
+    const STATUS_ACTIVE = 'Active';
+    const STATUS_UNACTIVE = 'Unactive';
+
     const STATUS = [
-        true => 'Active',
-        false => 'Unactive',
+        true => self::STATUS_ACTIVE,
+        false => self::STATUS_UNACTIVE,
     ];
 
     public $fillable = ['title', 'content', 'user_id', 'is_active', 'category_id', 'thumbnail'];
@@ -61,6 +64,10 @@ class Post extends Model implements Viewable
         $date = new DateTime($date);
         return $date->format('M d Y');
     }
+    public function getStatusAttribute()
+    {
+        return !!$this->attributes['is_active'] ? self::STATUS_ACTIVE : self::STATUS_UNACTIVE;
+    }
 
     public function scopeSearch($query, $q = null)
     {
@@ -81,10 +88,6 @@ class Post extends Model implements Viewable
     public function commentsCount()
     {
         $count = $this->comments->count();
-
-       /*  $this->comments->map(function($comment) use($count) {
-                $count += $comment->replies->count();
-        }); */
 
         if ($count > 1) {
             return $count . ' comments';

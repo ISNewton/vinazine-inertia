@@ -1,0 +1,27 @@
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  background-color: 'red';
+  background-image: none;
+}
+@tailwind utilities;
+@tailwind base;
+@tailwind components;
+
+@tailwind reset;
+
+ /* Reset */
+/* @tailwind base; */
+/* @tailwind reset; */
+
+/* Components */
+/* @tailwind components; */
+/* @import 'buttons'; */
+/* @import 'form'; */
+
+/* Utilities */
+/* @tailwind utilities; */
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  background-color: 'red';
+  background-image: none;
+}

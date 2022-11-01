@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Requests\UpdateCategoryRequest;
+use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
+use Inertia\Inertia;
 
 class CategoryController extends Controller
 {
@@ -20,7 +19,9 @@ class CategoryController extends Controller
     {
         $categories = Category::withCount('posts')->latest()->paginate(20);
 
-        return view('dashboard.categories.index',compact('categories'));
+        return Inertia::render('Categories/Index',[
+            'categories' => CategoryResource::collection($categories),
+        ]);
     }
 
     /**
@@ -30,7 +31,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('dashboard.categories.create');
+        return Inertia::render('Categories/Create');
     }
 
     /**
@@ -51,17 +52,6 @@ class CategoryController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -69,7 +59,10 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('dashboard.categories.edit',compact('category'));
+        $category->load(['posts' => fn($q) => $q->latest()->limit(10)]);
+        return Inertia::render('Categories/Edit',[
+            'category' => CategoryResource::make($category),
+        ]);
     }
 
     /**

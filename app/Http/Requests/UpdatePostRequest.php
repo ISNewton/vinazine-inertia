@@ -27,7 +27,7 @@ class UpdatePostRequest extends FormRequest
         return [
             'title' => 'string|required|max:256',
             'content' => 'string|required|min:20',
-            'is_active' => 'sometimes|in:on,off',
+            'is_active' => 'sometimes|boolean',
             'category_id' => 'integer|required',
             'thumbnail' => 'nullable|image'
         ];
