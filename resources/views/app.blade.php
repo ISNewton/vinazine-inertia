@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		{{-- <link rel="stylesheet" href="resources/css/app.css"> --}}
 		
-		<title>Laravel with Inertia</title>
+		<title>Vinazine Dashboard</title>
 		@vite
 	</head>
 	<body class="h-full bg-gray-100">

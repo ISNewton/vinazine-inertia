@@ -5,10 +5,9 @@
       <div class="md:flex md:flex-col md:h-screen">
         <div class="md:flex md:flex-shrink-0">
           <div class="flex items-center justify-between px-6 py-4 bg-slate-700 md:flex-shrink-0 md:justify-center md:w-56">
-            <Link class="mt-1" href="/">
+            <Link class="mt-1" href="/panel">
               <!-- <logo class="fill-white" width="120" height="28" /> -->
               <h1 class="text-xl text-white whitespace-nowrap">Vinazine dashboard</h1>
-              
             </Link>
             <dropdown class="md:hidden" placement="bottom-end">
               <template #default>
