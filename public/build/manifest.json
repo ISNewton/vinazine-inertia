@@ -1,12 +1,415 @@
 {
   "resources/scripts/main.ts": {
-    "file": "assets/main.9470b65c.js",
+    "file": "assets/main.697461d8.js",
     "src": "resources/scripts/main.ts",
-    "isEntry": true
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/views/dashboard/Charts/BarChart.vue",
+      "resources/views/dashboard/Pages/Categories/Create.vue",
+      "resources/views/dashboard/Pages/Categories/Edit.vue",
+      "resources/views/dashboard/Pages/Categories/Index.vue",
+      "resources/views/dashboard/Pages/Index.vue",
+      "resources/views/dashboard/Pages/Posts/Create.vue",
+      "resources/views/dashboard/Pages/Posts/Edit.vue",
+      "resources/views/dashboard/Pages/Posts/Index.vue",
+      "resources/views/dashboard/Pages/Test.vue",
+      "resources/views/dashboard/Pages/Users/Create.vue",
+      "resources/views/dashboard/Pages/Users/Edit.vue",
+      "resources/views/dashboard/Pages/Users/Index.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/FileInput.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Shared/LoadingButton.vue",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/Pagination.vue",
+      "resources/views/dashboard/Shared/SearchFilter.vue",
+      "resources/views/dashboard/Shared/SelectInput.vue",
+      "resources/views/dashboard/Shared/Stats.vue",
+      "resources/views/dashboard/Shared/TextInput.vue",
+      "resources/views/dashboard/Shared/TextareaInput.vue",
+      "resources/views/dashboard/Shared/TipTap.vue",
+      "resources/views/dashboard/Shared/TrashedMessage.vue"
+    ]
+  },
+  "resources/views/dashboard/Charts/BarChart.vue": {
+    "file": "assets/BarChart.c2767509.js",
+    "src": "resources/views/dashboard/Charts/BarChart.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "__plugin-vue_export-helper.cdc0426e.js"
+    ]
+  },
+  "__plugin-vue_export-helper.cdc0426e.js": {
+    "file": "assets/_plugin-vue_export-helper.cdc0426e.js"
+  },
+  "resources/views/dashboard/Pages/Categories/Create.vue": {
+    "file": "assets/Create.5fd0445c.js",
+    "src": "resources/views/dashboard/Pages/Categories/Create.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Shared/TextInput.vue",
+      "resources/views/dashboard/Shared/LoadingButton.vue",
+      "_index.3c93edac.js",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue"
+    ]
+  },
+  "resources/views/dashboard/Shared/Layout.vue": {
+    "file": "assets/Layout.e5424df6.js",
+    "src": "resources/views/dashboard/Shared/Layout.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue",
+      "__plugin-vue_export-helper.cdc0426e.js"
+    ]
+  },
+  "resources/views/dashboard/Shared/TextInput.vue": {
+    "file": "assets/TextInput.b1a58380.js",
+    "src": "resources/views/dashboard/Shared/TextInput.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
+  },
+  "resources/views/dashboard/Shared/LoadingButton.vue": {
+    "file": "assets/LoadingButton.2c1bb770.js",
+    "src": "resources/views/dashboard/Shared/LoadingButton.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
+  },
+  "_index.3c93edac.js": {
+    "file": "assets/index.3c93edac.js",
+    "imports": [
+      "resources/scripts/main.ts"
+    ]
+  },
+  "resources/views/dashboard/Shared/Logo.vue": {
+    "file": "assets/Logo.4bb5d3c0.js",
+    "src": "resources/views/dashboard/Shared/Logo.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
+  },
+  "resources/views/dashboard/Shared/Icon.vue": {
+    "file": "assets/Icon.db034cca.js",
+    "src": "resources/views/dashboard/Shared/Icon.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
+  },
+  "resources/views/dashboard/Shared/Dropdown.vue": {
+    "file": "assets/Dropdown.0df41cec.js",
+    "src": "resources/views/dashboard/Shared/Dropdown.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "__plugin-vue_export-helper.cdc0426e.js"
+    ]
+  },
+  "resources/views/dashboard/Shared/MainMenu.vue": {
+    "file": "assets/MainMenu.dad7eefd.js",
+    "src": "resources/views/dashboard/Shared/MainMenu.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "__plugin-vue_export-helper.cdc0426e.js"
+    ]
+  },
+  "resources/views/dashboard/Shared/FlashMessages.vue": {
+    "file": "assets/FlashMessages.5663986e.js",
+    "src": "resources/views/dashboard/Shared/FlashMessages.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
+  },
+  "resources/views/dashboard/Pages/Categories/Edit.vue": {
+    "file": "assets/Edit.7d71eb89.js",
+    "src": "resources/views/dashboard/Pages/Categories/Edit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Shared/TextInput.vue",
+      "resources/views/dashboard/Shared/FileInput.vue",
+      "resources/views/dashboard/Shared/SelectInput.vue",
+      "resources/views/dashboard/Shared/LoadingButton.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue"
+    ]
+  },
+  "resources/views/dashboard/Shared/FileInput.vue": {
+    "file": "assets/FileInput.8c529a1d.js",
+    "src": "resources/views/dashboard/Shared/FileInput.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
+  },
+  "resources/views/dashboard/Shared/SelectInput.vue": {
+    "file": "assets/SelectInput.b422ccee.js",
+    "src": "resources/views/dashboard/Shared/SelectInput.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "__plugin-vue_export-helper.cdc0426e.js"
+    ]
+  },
+  "resources/views/dashboard/Pages/Categories/Index.vue": {
+    "file": "assets/Index.e49f9f2b.js",
+    "src": "resources/views/dashboard/Pages/Categories/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "_index.3c93edac.js",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Shared/SearchFilter.vue",
+      "resources/views/dashboard/Shared/Pagination.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue"
+    ]
+  },
+  "resources/views/dashboard/Shared/SearchFilter.vue": {
+    "file": "assets/SearchFilter.3afe9574.js",
+    "src": "resources/views/dashboard/Shared/SearchFilter.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
+  },
+  "resources/views/dashboard/Shared/Pagination.vue": {
+    "file": "assets/Pagination.deebc964.js",
+    "src": "resources/views/dashboard/Shared/Pagination.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "__plugin-vue_export-helper.cdc0426e.js"
+    ]
+  },
+  "resources/views/dashboard/Pages/Index.vue": {
+    "file": "assets/Index.aa76acc6.js",
+    "src": "resources/views/dashboard/Pages/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Charts/BarChart.vue",
+      "resources/views/dashboard/Shared/Stats.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue"
+    ]
+  },
+  "resources/views/dashboard/Shared/Stats.vue": {
+    "file": "assets/Stats.82133164.js",
+    "src": "resources/views/dashboard/Shared/Stats.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/views/dashboard/Shared/Icon.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
+  },
+  "resources/views/dashboard/Pages/Posts/Create.vue": {
+    "file": "assets/Create.f61f248b.js",
+    "src": "resources/views/dashboard/Pages/Posts/Create.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Shared/FileInput.vue",
+      "resources/views/dashboard/Shared/TextInput.vue",
+      "resources/views/dashboard/Shared/SelectInput.vue",
+      "resources/views/dashboard/Shared/LoadingButton.vue",
+      "_index.3c93edac.js",
+      "resources/views/dashboard/Shared/TipTap.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue"
+    ]
+  },
+  "resources/views/dashboard/Shared/TipTap.vue": {
+    "file": "assets/TipTap.6105e304.js",
+    "src": "resources/views/dashboard/Shared/TipTap.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "__plugin-vue_export-helper.cdc0426e.js"
+    ]
+  },
+  "resources/views/dashboard/Pages/Posts/Edit.vue": {
+    "file": "assets/Edit.129b8331.js",
+    "src": "resources/views/dashboard/Pages/Posts/Edit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Shared/TextInput.vue",
+      "resources/views/dashboard/Shared/FileInput.vue",
+      "resources/views/dashboard/Shared/SelectInput.vue",
+      "resources/views/dashboard/Shared/LoadingButton.vue",
+      "resources/views/dashboard/Shared/TipTap.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue"
+    ]
+  },
+  "resources/views/dashboard/Pages/Posts/Index.vue": {
+    "file": "assets/Index.ba3f85b1.js",
+    "src": "resources/views/dashboard/Pages/Posts/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "_index.3c93edac.js",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Shared/SearchFilter.vue",
+      "resources/views/dashboard/Shared/Pagination.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue"
+    ]
+  },
+  "resources/views/dashboard/Pages/Test.vue": {
+    "file": "assets/Test.71f24fc1.js",
+    "src": "resources/views/dashboard/Pages/Test.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
+  },
+  "resources/views/dashboard/Pages/Users/Create.vue": {
+    "file": "assets/Create.fd03bb72.js",
+    "src": "resources/views/dashboard/Pages/Users/Create.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Shared/FileInput.vue",
+      "resources/views/dashboard/Shared/TextInput.vue",
+      "resources/views/dashboard/Shared/SelectInput.vue",
+      "resources/views/dashboard/Shared/LoadingButton.vue",
+      "_index.3c93edac.js",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue"
+    ]
+  },
+  "resources/views/dashboard/Pages/Users/Edit.vue": {
+    "file": "assets/Edit.0fecbb37.js",
+    "src": "resources/views/dashboard/Pages/Users/Edit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Shared/TextInput.vue",
+      "resources/views/dashboard/Shared/FileInput.vue",
+      "resources/views/dashboard/Shared/SelectInput.vue",
+      "resources/views/dashboard/Shared/LoadingButton.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue"
+    ]
+  },
+  "resources/views/dashboard/Pages/Users/Index.vue": {
+    "file": "assets/Index.b4a0b500.js",
+    "src": "resources/views/dashboard/Pages/Users/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/scripts/main.ts",
+      "resources/views/dashboard/Shared/Icon.vue",
+      "_index.3c93edac.js",
+      "resources/views/dashboard/Shared/Layout.vue",
+      "resources/views/dashboard/Shared/SearchFilter.vue",
+      "resources/views/dashboard/Shared/Pagination.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/views/dashboard/Shared/Logo.vue",
+      "resources/views/dashboard/Shared/Dropdown.vue",
+      "resources/views/dashboard/Shared/MainMenu.vue",
+      "resources/views/dashboard/Shared/FlashMessages.vue"
+    ]
+  },
+  "resources/views/dashboard/Shared/TextareaInput.vue": {
+    "file": "assets/TextareaInput.71e812a7.js",
+    "src": "resources/views/dashboard/Shared/TextareaInput.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
+  },
+  "resources/views/dashboard/Shared/TrashedMessage.vue": {
+    "file": "assets/TrashedMessage.9572cfbd.js",
+    "src": "resources/views/dashboard/Shared/TrashedMessage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/views/dashboard/Shared/Icon.vue",
+      "__plugin-vue_export-helper.cdc0426e.js",
+      "resources/scripts/main.ts"
+    ]
   },
   "resources/css/tailwind.css": {
-    "file": "assets/tailwind.52222c95.css",
+    "file": "assets/tailwind.26729b37.css",
     "src": "resources/css/tailwind.css",
+    "isEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.895d0dd6.css",
+    "src": "resources/css/app.css",
     "isEntry": true
   }
 }

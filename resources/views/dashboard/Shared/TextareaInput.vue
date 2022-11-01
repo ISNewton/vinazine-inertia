@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { v4 as uuid } from 'uuid'
 
 export default {
   inheritAttrs: false,
@@ -15,7 +14,7 @@ export default {
     id: {
       type: String,
       default() {
-        return `textarea-input-${uuid()}`
+        return `textarea-input`
       },
     },
     error: String,
